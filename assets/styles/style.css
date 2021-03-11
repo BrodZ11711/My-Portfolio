@@ -1,0 +1,182 @@
+/*Colors will go darker as the number increases*/
+:root {
+    --color1: #c5c4b8;
+    --color2: #757e7b;
+    --color3: #202523;
+    --color4: #cb784e;
+    --color5: #444a47;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Bellota Text", "Verdana", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color2);
+}
+
+main {
+    display: flex;
+    margin: 2% 4%;
+    flex-wrap: wrap;
+    
+}
+
+.header {
+    padding: 40px;
+    background-color: var(--color4);
+    width: 100%;
+    color: var(--color1);
+    position: fixed;
+    
+}
+
+.header h1 {
+    display: inline-block;
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.header nav {
+    font-size: 16px;
+    margin-right: 20px;
+    padding-top: 12px;
+    float: right;
+    
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+ul a:hover { background-color: var(--color2); }
+
+.hero {
+    /*I cant seem to make this centered? I tried using block, but then it clashes with the header too much.*/
+    height: 500px;
+    width: 100%;
+    margin-top: 140px;
+    margin-bottom: -6px;
+    background-size: cover;
+    background-position: center;
+}
+
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+  font-weight: 700;
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  
+  
+}
+
+h2 {
+  font-size: 35px;
+  color: var(--color5);
+}
+
+h3 {
+  font-size: 25px;
+  color: var(--color5);
+}
+
+h4 {
+  font-size: 15px;
+  color: var(--color1);
+}
+
+p {
+  padding-bottom: 2px
+  /*Alignment doesnt appear to work*/
+  /* text-align: center; */
+}
+
+.me {
+  list-style: none;
+}
+
+.me li::before {
+  display: inline-block; 
+  content: "\2022";
+  width: 1em;
+  color: var(--color4);
+  margin-left: 12px;
+}
+
+
+.card {
+
+  padding: 10px;
+  text-align: center;
+  border-style: dashed;
+  flex: 1 1 400px;
+  border-width: 1px;
+  border-color: var(--color5);
+  border-radius: 6%;
+  float: left;
+  width: 25%;
+  height: 460px;
+}
+
+.card header {
+  flex: 1 1 400px;
+  font-weight: bold;
+  padding: 5px;  
+  background-color: var(--color3);
+  color: var(--color5);
+  
+}
+
+.card img {
+  flex: 1 1 400px;
+  padding: 10px;
+  height: auto;
+  width: 100%;
+  
+}
+
+.card p {
+  flex: 1 1 400px;
+  padding: 15px;
+  height: 85px;
+}
+
+#contact-me{
+    display: inline-block;
+    padding: 15px;
+    height: 40px;
+}
+
+footer {
+    display: flex;
+    justify-content: left;
+    padding: 1%;
+    background-color: var(--color4);
+  }
+
+
+/* Cards will be put into a grid of 4 once the screen reaches a size of 1080p or lower*/
+@media screen and (max-width: 1080px) {
+  .card {
+    width: 50%;
+    height: 500px;    
+  }
+}
+
+/* Cards are put into a single coloum 600px or lower */
+@media screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+    height: 400px;    
+  }
+}
